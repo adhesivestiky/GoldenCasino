@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const bot = new Client();
+const bot = new Discord.Client({disableEveryone: true});
 
 client.on('ready', () => {
   console.log('Bot is on');
