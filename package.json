@@ -1,7 +1,7 @@
 {
   "name": "test-bot",
   "version": "0.4.0",
-  "description": "Adhesive's slapping bot.",
+  "description": "golden casino bot",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
