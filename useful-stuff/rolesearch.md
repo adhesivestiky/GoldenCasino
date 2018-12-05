@@ -1,5 +1,5 @@
-Code for searching for members/roles:
-(Use `users` instead of `roles` to search for members.)
+Code for searching for roles:
+
 ```.
     let role = args.join(" ");
 	  if (!role) return message.reply("please say a role to view.");
