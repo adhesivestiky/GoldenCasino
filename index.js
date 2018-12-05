@@ -9,7 +9,7 @@ bot.on('ready', () => {
 bot.on("message", async message => {
  if(message.author.bot) return;
  if(!message.content.startsWith("$")) return;
-  };
+});
        
 let messageArray = message.content.split(" ");
 let cmd = messageArray[0];
