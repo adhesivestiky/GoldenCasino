@@ -26,7 +26,7 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", () => {
   console.log(`${bot.user.username} is online on these servers: ${bot.guilds.map(g => g.name)}!!`);
-  bot.user.setActivity(`with ${bot.users.size} users | Prefix is "."`);
+  bot.user.setActivity(`with ${bot.users.size} users | Prefix is "$"`);
 });
 
 bot.on("message", async message => {
