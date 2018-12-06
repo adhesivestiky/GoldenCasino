@@ -1,10 +1,10 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
- let playerlimit = args[0];
+ let playerlimit = args[0] - 1
  let a = new Discord.RichEmbed()
  .setColor('GREEN')
- .setDescription(`Players:\nPlayer limit: ${args[0]}`);
+ .setDescription(`Players:\nPlayer limit: ${playerlimit}`);
  
  let b = await message.channel.send(a);
  b.react('🍤');
@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
  
  let d = new Discord.RichEmbed()
  .setColor('GREEN')
- .setDescription(`Players: ${a.users.join(", ")}\nPlayer limit: ${args[0]}`);
+ .setDescription(`Players: ${a.users}\nPlayer limit: ${playerlimit}`);
  
  if(c.count == playerlimit){
   b.edit(a)
