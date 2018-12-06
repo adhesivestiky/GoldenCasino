@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
  if(playerlimit = 'NaN'){
   playerlimit = 3
  };
- 
+ F
  let a = new Discord.RichEmbed()
  .setColor('GREEN')
  .setDescription(`Players:\nPlayer limit: ${playerlimit}\n**The game will start in 45 seconds. React to join!**`);
