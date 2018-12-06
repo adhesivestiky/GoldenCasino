@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
  
  let d = new Discord.RichEmbed()
  .setColor('GREEN')
- .setDescription(`Players: ${b.fetchUsers(playerlimit - 1)}>\nPlayer limit: ${playerlimit}`);
+ .setDescription(`Players: ${b.fetchUsers([playerlimit - 1])}>\nPlayer limit: ${playerlimit}`);
  
  let timer = new Set();
  let time = 45
