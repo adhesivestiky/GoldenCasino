@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
  
  let a = new Discord.RichEmbed()
  .setColor('GREEN')
- .setDescription(`Players:\nPlayer limit: ${playerlimit}`);
+ .setDescription(`Players:\nPlayer limit: ${playerlimit}\n**The game will start in 45 seconds**`);
  
  let b = await message.channel.send(a);
  b.react('🎲');
@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
  
  let d = new Discord.RichEmbed()
  .setColor('GREEN')
- .setDescription(`Players: ${b.fetchUsers([playerlimit - 1])}>\nPlayer limit: ${playerlimit}`);
+ .setDescription(`Players: ${b.users}>\nPlayer limit: ${playerlimit}`);
  
  let timer = new Set();
  let time = 45
