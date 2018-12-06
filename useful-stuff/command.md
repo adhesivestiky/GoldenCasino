@@ -1,4 +1,4 @@
-{For use when command handler made}This is the basic, empty code for a command:
+This is the basic, empty code for a command:
 
 ```.
 const Discord = require("discord.js");
