@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
  .setDescription(`Players:\nPlayer limit: ${playerlimit}`);
  
  let b = await message.channel.send(a);
- b.react('<:GoldenCasino:520091757036175370>');
+ b.react('🎲');
  let c = message.channel.fetchMessage(`${b.id}`);
  
  let d = new Discord.RichEmbed()
