@@ -12,10 +12,10 @@ module.exports.run = async (bot, message, args) => {
  
  let d = new Discord.RichEmbed()
  .setColor('GREEN')
- .setDescription(`Players: ${a.users}\nPlayer limit: ${playerlimit}`);
- 
+ .setDescription(`Players: ${b.users}\nPlayer limit: ${playerlimit}`);
+ if(b.count === playerlimit - 1){
   b.edit(d);
- 
+ }
  
 }
 
