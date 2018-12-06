@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
  .setColor('GREEN')
  .setDescription(`Players: ${a.users}\nPlayer limit: ${playerlimit}`);
  
-  c.edit(d);
+  b.edit(d);
  
  
 }
