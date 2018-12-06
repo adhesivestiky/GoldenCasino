@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
  .setDescription(`Players: ${a.users}\nPlayer limit: ${playerlimit}`);
  
  if(c.count == playerlimit - 1){
-  b.edit(d)
+  c.edit(d)
  };
  
 }
