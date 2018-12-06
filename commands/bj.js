@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
  timer.add
  setTimeout(() => {
   timer.delete
- } time * 1000);
+ }, time * 1000);
  
   b.edit(d);
 
