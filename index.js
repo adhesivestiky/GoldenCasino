@@ -31,9 +31,9 @@ bot.on("ready", () => {
 
 bot.on("message", async message => {
   if(message.author.bot) return;
-  if(!message.content.startsWith("." || "<@520003742691622921> ")) return;
+  if(!message.content.startsWith("$")) return;
 
-  let prefix = [".", "<@520003742691622921> "];
+  let prefix = "$";
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
