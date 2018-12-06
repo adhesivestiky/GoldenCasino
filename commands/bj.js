@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
  
  let b = await message.channel.send(a);
  b.react('🍤');
- let c = msg.channel.fetchMessage(`${b.id}`);
+ let c = message.channel.fetchMessage(`${b.id}`);
  
  let d = new Discord.RichEmbed()
  .setColor('GREEN')
