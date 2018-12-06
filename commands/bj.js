@@ -23,9 +23,9 @@ module.exports.run = async (bot, message, args) => {
  timer.add
  setTimeout(() => {
   timer.delete
+  b.edit(d);
  }, time * 1000);
  
-  b.edit(d);
 
  
 }
