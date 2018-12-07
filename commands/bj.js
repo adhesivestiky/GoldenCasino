@@ -26,18 +26,30 @@ module.exports.run = async (bot, message, args) => {
   b.edit(d);
  }, time * 1000);
  
-     message.channel.send(`please say a valid blackjack move`).then(() => {	
+     message.channel.send(`Please say a valid blackjack move.`).then(() => {	
             message.channel.awaitMessages(response => response.content === `hit` || response.content === 'stay' || response.content === 'double' || response.content === 'fold',  {	
                 max: 1, // number of responses to collect	
                 time: 10000, //time that bot waits for answer in ms	
                 errors: ['time'],	
             })	
                 .then((collected) => {	
-                    let play = collected.first().content; //this is the first response collected	
+                    let play = collected.first().content.toLowerCase(); //this is the first response collected	
                     message.channel.send('You chose to ' + play);	
                    if(play == 'fold'){	
                     message.channel.send('Ok, you quit');	
                    }	
+             
+               if(play == 'hit'){
+                 message.channel.send('Drawing another card.. Jk I haven\'t bought any cards yet lol');
+               };
+             
+             if(play == 'stay'){
+               message.channel.send('No.')
+             }
+             
+             if(play == 'double'){
+              message.channel.send('Why would I double your bet of 0?');
+             }
                 })	
                 .catch(() => { // if no message is collected	
                     message.channel.send('I didnt catch that, Try again.');	
