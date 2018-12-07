@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 //any other things, such as JSONs and fs
 
 module.exports.run = async (bot, message, args) => {
- if(!message.author.hasPermission('MANAGE_MESSAGES')) return message.channel.reply('You can\'t use this command!');
+ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.reply('You can\'t use this command!');
  let member = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
  let reason = args[1];
  
