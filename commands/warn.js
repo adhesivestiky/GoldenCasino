@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
  
  let embed = new Discord.RichEmbed()
  .setColor('RANDOM')
- .setDescription(`<@${member.id}> has been warned./nReason: ${reason}.`)
+ .setDescription(`**<@${member.id}>** has been warned.\n**Reason:** ${reason}.`)
  .setFooter(`Warned by ${message.author.tag}`, message.author.displayAvatarURL)
  .setTimestamp();
  
