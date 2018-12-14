@@ -6,10 +6,16 @@ module.exports.run = async (bot, message, args) => {
  m.delete();
  let ping = Math.round(bot.ping);
  
+ let pingmages = ['https://media.giphy.com/media/7izvpUrQVlUVG/giphy.gif', 
+                  'https://media.giphy.com/media/v1dTuaCHDuEA8/giphy.gif', 
+                  'https://media.giphy.com/media/4IAzyrhy9rkis/giphy.gif',
+                  'https://cdn.discordapp.com/attachments/516507779738107919/522964461804584960/pangedr.gif', 
+                  'https://media.giphy.com/media/WSuJXoyJaKdvW/giphy.gif']
+ 
  let pingembed = new Discord.RichEmbed()
  .setColor('RANDOM')
  .setTitle('Pong!')
- .setThumbnail('https://cdn.discordapp.com/attachments/516507779738107919/522964461804584960/pangedr.gif')
+ .setThumbnail(pingmages[Math.floor(Math.random() * pingmages.length)])
  .setDescription(`**Response Time:** \`${m.createdTimestamp - message.createdTimestamp}ms\`\n**Bot Ping:** \`${ping}ms\``)
  .setFooter(`Panged by ${message.author.tag}`, message.author.displayAvatarURL)
  .setTimestamp();
