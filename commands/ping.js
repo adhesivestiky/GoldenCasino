@@ -10,7 +10,12 @@ module.exports.run = async (bot, message, args) => {
                   'https://media.giphy.com/media/v1dTuaCHDuEA8/giphy.gif', 
                   'https://media.giphy.com/media/4IAzyrhy9rkis/giphy.gif',
                   'https://cdn.discordapp.com/attachments/516507779738107919/522964461804584960/pangedr.gif', 
-                  'https://media.giphy.com/media/WSuJXoyJaKdvW/giphy.gif']
+                  'https://media.giphy.com/media/WSuJXoyJaKdvW/giphy.gif', 
+                  'https://derpicdn.net/img/view/2018/3/31/1695073.gif', 
+                  'https://discordemoji.com/assets/emoji/PandaPingRee.gif', 
+                  'https://discordemoji.com/assets/emoji/PingNom.gif', 
+                  'https://discordemoji.com/assets/emoji/hyperpinged.png'
+                 ]
  
  let pingembed = new Discord.RichEmbed()
  .setColor('RANDOM')
