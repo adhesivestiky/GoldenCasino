@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 let chan = args[0];
-chan.channel.send(args.join(" "));
+chan.send(args.join(" "));
 
 message.delete();
 }
