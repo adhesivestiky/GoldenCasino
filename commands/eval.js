@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
       let errembed = new Discord.RichEmbed()
       .setColor('#f44242')
       .setTitle('Error!')
-      .setDescription(`Error:\n\`\`\`${(err)}\`\`\``)
+      .setDescription(`\`\`\`${(err)}\`\`\``)
       .setFooter(`Eval ran by ${message.author.tag}`, message.author.displayAvatarURL)
       .setTimestamp();
  
