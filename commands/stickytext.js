@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-  if(!message.author.hasPermission('MANAGE_MESSAGES')){
+  if(!message.member.hasPermission('MANAGE_MESSAGES')){
     message.channel.send('Sorry, you can\'t use this.');
   };
   let smessage = args.join(" ");
