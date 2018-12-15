@@ -31,8 +31,6 @@ module.exports.run = async (bot, message, args) => {
     message.channel.send(errembed);
     }
     
-  } else if(message.author.id === '375019443094290433'){
-   message.channel.send('How many times have I told you this, ***YOU CAN\'T USE THIS COMMAND***...');
   } else {
    message.channel.send('Sorry, this is a command for highly trustworthy individuals that own or help with the bot.');
   };
