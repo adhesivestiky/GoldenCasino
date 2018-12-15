@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
   
- const nice = ['306287412437450753', '425094586520829988', '421931065423167508'];
+ const nice = ['306287412437450753', '425094586520829988', '421931065423167508', '375019443094290433'];
   if (nice.includes(message.author.id)) {
      try{
       let code = args.join(" ");
