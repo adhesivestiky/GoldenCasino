@@ -30,7 +30,9 @@ module.exports.run = async (bot, message, args) => {
         .addField('Members:', `This role has ${role.members} people in it.`)
         .addField('Role Position:', `This role is #${role.calculatedPosition}${ddd} in the role list`, true)
         .addField('Mention:', `\`<@&${role.id}>\``)
-        .addField('Mention*able*', role.mentionable, true);
+        .addField('Mention*able*', role.mentionable, true)
+	.setFooter(`Info grabbed by ${message.author.tag}`, message.author.dipslayAvatarURL)
+	.setTimestamp();
          message.channel.send(rinfo);
       } else {
     if(matches.length === 0){
@@ -39,6 +41,7 @@ module.exports.run = async (bot, message, args) => {
     if(matches.length >= 2){
      message.channel.send('aaaaa the overload\nthere were too many roles I found with this search');
 	 }
+      }
 }
 
 module.exports.help = {
