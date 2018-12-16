@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
         let ddd = '.';
         if(role.calculatedPosition === 2 || role.calculatedPosition === 22){
          ddd = 'nd'
-        } else if(role.calculatedPositon = 3 || role.calculatedPosition === 23){
+        } else if(role.calculatedPositon === 3 || role.calculatedPosition === 23){
      ddd = 'rd'
     } else {
      ddd = 'th'
@@ -24,14 +24,14 @@ module.exports.run = async (bot, message, args) => {
       ded = 'I can not edit this role.'
     };
         let rinfo = new Discord.RichEmbed()
-        .setTitle(`${role}'s info:`)
+        .setDescription(`**${role}'s info:**`)
         .setColor(role.hexColor)
-        .setDescription(ded)
-        .addField('Members:', `This role has ${role.members} people in it.`)
+        .setAuthor(ded)
+        .addField('Hoist:', `${role.hoist}`, false)
         .addField('Role Position:', `This role is #${role.calculatedPosition}${ddd} in the role list`, true)
-        .addField('Mention:', `\`<@&${role.id}>\``)
+        .addField('Mention:', `\`<@&${role.id}>\``, false)
         .addField('Mention*able*', role.mentionable, true)
-	.setFooter(`Info grabbed by ${message.author.tag}`, message.author.dipslayAvatarURL)
+	.setFooter(`Info grabbed by ${message.author.tag}`, message.member.dipslayAvatarURL)
 	.setTimestamp();
          message.channel.send(rinfo);
       } else {
