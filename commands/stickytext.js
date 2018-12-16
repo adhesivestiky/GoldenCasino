@@ -8,12 +8,13 @@ module.exports.run = async (bot, message, args) => {
     };
     let smessage = args.join(" ");
     let m = await message.channel.send(smessage);
-    if(message){
+    if(message && !message.author.bot){
       m.delete();
       message.channel.send(smessage);
     };
     
     if(message.content == '$stickyremove'){
+      supertimer2000 = 'off'
       break;
     };
   };
