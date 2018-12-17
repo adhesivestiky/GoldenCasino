@@ -39,7 +39,7 @@ module.exports.run = async (bot, message, args) => {
       message.channel.send(`don't think there were any roles with \`${args.join(" ")}\` in their names..`);
       }
     if(matches.length >= 2){
-     message.channel.send(`aaaaa the overload!! there were too many roles I found with this search!!\nthese were the ones I found:\n${matches.join("\n")}\nPlease give me something more specific gambler guy!`);
+     message.channel.send(`aaaaa the overload!! there were too many roles I found with this search!!\nthese were the ones I found:\n${matches.join("\n").name}\nPlease give me something more specific gambler guy!`);
 	 }
       }
 }
