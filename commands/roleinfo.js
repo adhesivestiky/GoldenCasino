@@ -48,7 +48,16 @@ module.exports.run = async (bot, message, args) => {
 	    
 	    message.channel.send(failembed);
 	 }
-      }
+      } catch(err) {
+      let errembed = new Discord.RichEmbed()
+      .setColor('#f44242')
+      .setTitle('Error!')
+      .setDescription(`\`\`\`${(err)}\`\`\``)
+      .setFooter(`Error recieved by ${message.author.tag} | Please report this to support if it keeps happening`, message.author.displayAvatarURL)
+      .setTimestamp();
+ 
+    message.channel.send(errembed);
+    }
 }
 
 module.exports.help = {
