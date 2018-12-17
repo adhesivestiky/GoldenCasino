@@ -31,15 +31,15 @@ module.exports.run = async (bot, message, args) => {
         .addField('Role Position:', `This role is #${role.calculatedPosition}${ddd} in the role list`, true)
         .addField('Mention:', `\`<@&${role.id}>\``, false)
         .addField('Mention*able*', role.mentionable, true)
-	.setFooter(`Info grabbed by ${message.author.tag}`, message.member.dipslayAvatarURL)
+	.setFooter(`Info grabbed by ${message.author.tag}`, message.author.dipslayAvatarURL)
 	.setTimestamp();
          message.channel.send(rinfo);
       } else {
     if(matches.length === 0){
-      message.channel.send(`don't think there were any roles with ${args.join(" ")} in their names..`);
+      message.channel.send(`don't think there were any roles with \`${args.join(" ")}\` in their names..`);
       }
     if(matches.length >= 2){
-     message.channel.send('aaaaa the overload\nthere were too many roles I found with this search');
+     message.channel.send(`aaaaa the overload!! there were too many roles I found with this search!!\nthese were the ones I found:\n${matches.join("\n")}\nPlease give me something more specific gambler guy!`);
 	 }
       }
 }
