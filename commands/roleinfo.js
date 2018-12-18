@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
    let role = args.join(" ");
 	  if(!role){
-	    message.channel.send("please say a role to view. There's not much to tell about @ everyone role");
+	    message.channel.send("please say a role to view. There's not much to tell about @everyone role");
 	  }
     const roles = message.guild.roles.array();
     const matches = roles.filter(role => role.name.toLowerCase().includes(args.join(" ").toLowerCase())) 
@@ -41,9 +41,9 @@ module.exports.run = async (bot, message, args) => {
     if(matches.length >= 2){
 	    let failembed = new Discord.RichEmbed()
             .setTitle('Role Search Failed:')
-            .addField(`aaaaa the overload!! there were too many roles I found with this search!!\nthese were the ones I found:\n${matches.join("\n")}`, `\nPlease give me something more specific gambler guy!`)
+            .addField(`aaaaa the overload!! there were too many roles I found with this search!!\nthese were the ones I found:\n${matches.join("\n")}`, `Please give me something more specific gambler guy!`)
 	    .setColor('#f44242')
-	    .setThumbnail(`Do better next time ${message.author.tag}!`)
+	    .setThumbnail(`Do better next time ${message.author.tag}!`, message.author.displayAvatarURL)
 	    .setTimestamp();
 	    
 	    message.channel.send(failembed);
